@@ -171,8 +171,6 @@ class FlipClockPlus extends StatelessWidget {
 
   FlipClockPlus.reverseCountdown({
     Key? key,
-    // required DateTime now,
-    // required DateTime dDay,
     required Duration duration,
     required Color digitColor,
     required Color backgroundColor,
@@ -243,12 +241,6 @@ class FlipClockPlus extends StatelessWidget {
           if (onDone != null) onDone!();
         }
       }
-      // else{
-      //   if (oldTime.day != time.day) {
-      //     time = oldTime;
-      //     if (onDone != null) onDone!();
-      //   }
-      // }
 
 
       return time;
@@ -258,8 +250,6 @@ class FlipClockPlus extends StatelessWidget {
         .asBroadcastStream();
 
     var digitList = <Widget>[];
-    // TODO(efortuna): Instead, allow the user to specify the format of time instead.
-    // Add hours if appropriate.
 
     if (_showDays) {
       digitList.addAll([
@@ -320,7 +310,6 @@ class FlipClockPlus extends StatelessWidget {
     }
     return Row(
       mainAxisSize: MainAxisSize.min,
-      // crossAxisAlignment: _showDays ? MainAxisAlignment.center : null,
       crossAxisAlignment: _showDays ? CrossAxisAlignment.start : CrossAxisAlignment.center,
       children: digitList
         ..addAll([
@@ -521,7 +510,7 @@ class FlipPanelPlus<T> extends StatefulWidget {
   ///
   /// * [itemBuilder] is called whenever a new value is emitted from [itemStream]
   ///
-  FlipPanelPlus.stream({
+  const FlipPanelPlus.stream({
     Key? key,
     required this.itemStream,
     required StreamItemBuilder<T> itemBuilder,
