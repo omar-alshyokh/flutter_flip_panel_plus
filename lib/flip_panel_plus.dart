@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:math' as math;
 
-
-typedef Widget DigitBuilder(BuildContext, int);
+// ignore: prefer_generic_function_type_aliases
+typedef Widget DigitBuilder(context, digit);
 
 ///
 /// A [Widget] provides a simple implementation of a flipclockPlus using [FlipPanelPlus]
@@ -247,7 +247,6 @@ class FlipClockPlus extends StatelessWidget {
     var time = startTime;
     final initStream =
     Stream<DateTime>.periodic(const Duration(milliseconds: 1000), (_) {
-      var oldTime = time;
       (countdownMode)
           ? timeLeft = timeLeft! - const Duration(seconds: 1)
           : time = time.add(const Duration(seconds: 1));
@@ -445,12 +444,15 @@ class FlipClockPlus extends StatelessWidget {
 /// Signature for a function that creates a widget for a given index, e.g., in a
 /// list.
 ///
-typedef Widget IndexedItemBuilder(BuildContext, int);
+// ignore: prefer_generic_function_type_aliases
+typedef Widget IndexedItemBuilder(context, index);
+
 
 ///
 /// Signature for a function that creates a widget for a value emitted from a [Stream]
 ///
-typedef Widget StreamItemBuilder<T>(BuildContext, T);
+// ignore: prefer_generic_function_type_aliases
+typedef Widget StreamItemBuilder<T>(context, T);
 
 ///
 /// An enum defines all supported directions of [FlipPanelPlus]
@@ -512,8 +514,7 @@ class FlipPanelPlus<T> extends StatefulWidget {
     this.spacing = 0.5,
     this.direction = FlipDirection.down,
   })
-      : assert(itemBuilder != null),
-        assert(itemsCount != null),
+      :assert(itemsCount != null),
         assert(startIndex! < itemsCount!),
         assert(period == null ||
             period.inMilliseconds >= 2 * duration!.inMilliseconds),
@@ -547,6 +548,7 @@ class FlipPanelPlus<T> extends StatefulWidget {
         super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _FlipPanelPlusState<T> createState() => _FlipPanelPlusState<T>();
 }
 

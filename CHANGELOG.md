@@ -1,3 +1,11 @@
+## 1.0.0+2
+* Update: pubspex.yaml description
+* Delete: unnecessary code
+
+## 1.0.0+1
+* Update: the example
+
+
 ## 1.0.0
 * migrate to null safety.
 * Update: environment sdk and flutter
