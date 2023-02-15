@@ -1,5 +1,5 @@
 ## 1.0.0+2
-* Update: pubspex.yaml description
+* Update: pubspec.yaml description
 * Delete: unnecessary code
 
 ## 1.0.0+1
