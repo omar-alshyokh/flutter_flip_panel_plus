@@ -2,6 +2,18 @@
 
 A package for flip panel with built-in animation. Since the developer of 'https://pub.dev/packages/flip_panel' didn't respond. So we updated the package and added some improvements.
 
+<p>
+
+    <img src="https://raw.githubusercontent.com/omar-alshyokh/flutter_flip_panel_plus/master/screenshots/flip_clock.gif" width="300" 
+        height="600" />
+   <img src="https://raw.githubusercontent.com/omar-alshyokh/flutter_flip_panel_plus/master/screenshots/flip_countdown.gif" width="300" 
+       height="600" />
+    <img src="https://raw.githubusercontent.com/omar-alshyokh/flutter_flip_panel_plus/master/screenshots/flip_image.gif" width="300"
+         height="600" />
+    <img src="https://raw.githubusercontent.com/omar-alshyokh/flutter_flip_panel_plus/master/screenshots/reverse_countdown.gif" width="300"
+         height="600" />
+</p>
+
 
 ## How to use
 
@@ -55,9 +67,7 @@ FlipPanelPlus<int>.stream(
 ````
 
 Create a flip panel countdown:
-<p>
-<img src="https://raw.githubusercontent.com/omar-alshyokh/flutter_flip_panel_plus/master/screenshots/flip_countdown.gif" width="250" height="443" />
-</p>
+
 ````dart
 FlipClock.countdown(
   duration: const Duration(hours:1),
