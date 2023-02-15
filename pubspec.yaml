@@ -2,7 +2,7 @@ name: flip_panel_plus
 description: A package for flip panel with built-in animation
 version: 1.0.0
 author: Omar Alshyokh <omar.alshyokh@gmail.com> && Hung Duy Ha <hunghd.yb@gmail.com>
-homepage: https://github.com/hnvn/flutter_flip_panel
+homepage: https://github.com/omar-alshyokh/flutter_flip_panel_plus
 
 environment:
   sdk: '>=2.19.1 <3.0.0'

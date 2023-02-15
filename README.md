@@ -1,39 +1,61 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Flip Panel Plus
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+A package for flip panel with built-in animation. Since the developer of 'https://pub.dev/packages/flip_panel' didn't respond. So we updated the package and added some improvements.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+<p>
+	<img src="https://github.com/hnvn/flutter_flip_panel/blob/master/screenshots/flip_image.gif?raw=true" width="250" height="443"  />
+	<img src="https://github.com/hnvn/flutter_flip_panel/blob/master/screenshots/flip_clock.gif?raw=true" width="250" height="443" />
+</p>
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## How to use
 
-## Features
+````dart
+import 'package:flip_panel/flip_panel.dart';
+````
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Create a flip panel from iterable source:
 
-## Getting started
+````dart
+final digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+FlipPanel.builder(
+    itemBuilder: (context, index) => Container(
+       color: Colors.black,
+       padding: const EdgeInsets.symmetric(horizontal: 6.0),
+       child: Text(
+         '${digits[index]}',
+         style: TextStyle(
+             fontWeight: FontWeight.bold,
+             fontSize: 50.0,
+             color: Colors.white),
+       ),
+     ),
+    itemsCount: digits.length,
+    period: const Duration(milliseconds: 1000),
+    loop: 1,
+)
+````
 
-## Usage
+Create a flip panel from stream source:
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+````dart
+FlipPanel<int>.stream(
+      itemStream: Stream.periodic(Duration(milliseconds: 1000), (count) => count % 10),
+      itemBuilder: (context, value) => Container(
+        color: Colors.black,
+        padding: const EdgeInsets.symmetric(horizontal: 6.0),
+        child: Text(
+          '$value',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 50.0,
+            color: Colors.white
+          ),
+        ),
+      ),
+      initValue: 0,
+  );
 
-```dart
-const like = 'sample';
-```
+````
 
-## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
