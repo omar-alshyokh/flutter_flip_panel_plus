@@ -6,7 +6,9 @@ A package for flip panel with built-in animation. Since the developer of 'https:
 
     <img src="https://raw.githubusercontent.com/omar-alshyokh/flutter_flip_panel_plus/master/screenshots/flip_clock.gif" width="250" 
         height="600" />
-   <img src="https://raw.githubusercontent.com/omar-alshyokh/flutter_flip_panel_plus/master/screenshots/flip_countdown.gif" width="250" 
+   <img src="https://raw.githubusercontent.com/omar-alshyokh/flutter_flip_panel_plus/master/screenshots/flip_clock.gif" width="250" 
+       height="600" />
+    <img src="https://raw.githubusercontent.com/omar-alshyokh/flutter_flip_panel_plus/master/screenshots/flip_countdown.gif" width="250" 
        height="600" />
     <img src="https://raw.githubusercontent.com/omar-alshyokh/flutter_flip_panel_plus/master/screenshots/flip_image.gif" width="250"
          height="600" />
