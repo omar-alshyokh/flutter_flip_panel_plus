@@ -700,7 +700,7 @@ class _FlipPanelPlusState<T> extends State<FlipPanelPlus>
     }
   }
 
-  Widget _buildUpperFlipPanel() =>
+  Widget _buildUpperFlipPanelPlus() =>
       widget.direction == FlipDirection.up
           ? Stack(
         children: [
@@ -737,7 +737,7 @@ class _FlipPanelPlusState<T> extends State<FlipPanelPlus>
         ],
       );
 
-  Widget _buildLowerFlipPanel() =>
+  Widget _buildLowerFlipPanelPlus() =>
       widget.direction == FlipDirection.up
           ? Stack(
         children: [
@@ -781,11 +781,11 @@ class _FlipPanelPlusState<T> extends State<FlipPanelPlus>
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        _buildUpperFlipPanel(),
+        _buildUpperFlipPanelPlus(),
         Padding(
           padding: EdgeInsets.only(top: widget.spacing!),
         ),
-        _buildLowerFlipPanel(),
+        _buildLowerFlipPanelPlus(),
       ],
     )
         : _isStreamMode && _currentValue == null
