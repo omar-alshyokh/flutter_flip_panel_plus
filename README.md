@@ -1,6 +1,13 @@
 # Flip Panel Plus
 
-A package for flip panel with built-in animation. Since the developer of 'https://pub.dev/packages/flip_panel' didn't respond. So we updated the package, added some improvements and fixed some issues.
+A package for flip panel items like image, countdown or clock with built-in animation.
+Since the developer of 'https://pub.dev/packages/flip_panel' didn't respond.
+So we updated the package, added some improvements and fixed some issues.
+
+## Getting Started
+
+To use this package, add `flip_panel_plus` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
+
 
 <p>
    <img src="https://raw.githubusercontent.com/omar-alshyokh/flutter_flip_panel_plus/master/screenshots/flip_clock.gif" width="200" 
@@ -15,12 +22,76 @@ A package for flip panel with built-in animation. Since the developer of 'https:
          height="450" />
 </p>
 
+## Add dependency
+```
+dependencies:
+  flip_panel_plus: ^1.0.0
+```
 
-## How to use
+## Import
 
 ````dart
 import 'package:flip_panel_plus/flip_panel_plus.dart';
 ````
+## Usage
+
+
+Create a flip panel countdown:
+
+````dart
+FlipClockPlus.countdown(
+  duration: const Duration(hours:1),
+  digitColor: Colors.white,
+  backgroundColor: Colors.black,
+  digitSize: 48.0,
+  borderRadius: const BorderRadius.all(Radius.circular(3.0)),
+  onDone: () {
+    print('OnDone');
+   },
+)
+````
+## Output
+![flip_countdown](https://raw.githubusercontent.com/omar-alshyokh/flutter_flip_panel_plus/master/screenshots/flip_countdown.gif)
+
+
+Create flip clock:
+
+````dart
+FlipClockPlus.simple(
+  startTime: DateTime.now(),
+  digitColor: Colors.white,
+  backgroundColor: Colors.black,
+  digitSize: 30.0,
+  centerGapSpace: 0.0,
+  borderRadius: const BorderRadius.all(Radius.circular(3.0)),
+)
+````
+## Output
+![flip_clock](https://raw.githubusercontent.com/omar-alshyokh/flutter_flip_panel_plus/master/screenshots/flip_clock.gif)
+
+
+
+Create flip reverse countdown:
+
+````dart
+FlipClockPlus.reverseCountdown(
+  duration:const Duration(days: 10),
+  digitColor: Colors.white,
+  backgroundColor: Colors.black,
+  digitSize: 30.0,
+  centerGapSpace: 0.0,
+  borderRadius: const BorderRadius.all(Radius.circular(3.0)),
+  onDone: () {
+    print('onDone');
+   },
+)
+````
+## Output
+![reverse_countdown](https://raw.githubusercontent.com/omar-alshyokh/flutter_flip_panel_plus/master/screenshots/reverse_countdown.gif)
+
+
+
+
 
 Create a flip panel from iterable source:
 
@@ -65,19 +136,4 @@ FlipPanelPlus<int>.stream(
       initValue: 0,
   );
 
-````
-
-Create a flip panel countdown:
-
-````dart
-FlipClockPlus.countdown(
-  duration: const Duration(hours:1),
-  digitColor: Colors.white,
-  backgroundColor: Colors.black,
-  digitSize: 48.0,
-  borderRadius: const BorderRadius.all(Radius.circular(3.0)),
-  onDone: () {
-    print('OnDone');
-   },
-)
 ````
