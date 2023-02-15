@@ -26,7 +26,7 @@ class FlipClockPlus extends StatelessWidget {
   final bool _showDays;
 
   /// custom str label that you can change them when we use [FlipClockPlus.reverseCountdown]
-  late String? _daysLabelStr, _hoursLabelStr, _minutesLabelStr,
+   String? _daysLabelStr, _hoursLabelStr, _minutesLabelStr,
       _secondsLabelStr;
 
   Duration? timeLeft;
