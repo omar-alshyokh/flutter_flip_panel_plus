@@ -206,7 +206,7 @@ class CountdownClockPage extends StatelessWidget {
       ),
       body: Center(
         child: FlipClock.countdown(
-          duration: const Duration(seconds:10),
+          duration: const Duration(hours:1),
           digitColor: Colors.white,
           backgroundColor: Colors.black,
           digitSize: 48.0,
@@ -235,11 +235,11 @@ class ReverseCountdown extends StatelessWidget {
       ),
       body: Center(
         child: FlipClock.reverseCountdown(
-          duration:const Duration(seconds: 10),
+          duration:const Duration(days: 10),
           digitColor: Colors.white,
           backgroundColor: Colors.black,
           digitSize: 30.0,
-          centerGapSpace: 1,
+          centerGapSpace: 0.0,
           borderRadius: const BorderRadius.all(Radius.circular(3.0)),
           onDone: () {
             print('onDone');

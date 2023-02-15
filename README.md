@@ -3,14 +3,13 @@
 A package for flip panel with built-in animation. Since the developer of 'https://pub.dev/packages/flip_panel' didn't respond. So we updated the package and added some improvements.
 
 <p>
-	<img src="https://github.com/hnvn/flutter_flip_panel/blob/master/screenshots/flip_image.gif?raw=true" width="250" height="443"  />
-	<img src="https://github.com/hnvn/flutter_flip_panel/blob/master/screenshots/flip_clock.gif?raw=true" width="250" height="443" />
+
 </p>
 
 ## How to use
 
 ````dart
-import 'package:flip_panel/flip_panel.dart';
+import 'package:flip_panel_plus/flip_panel_plus.dart';
 ````
 
 Create a flip panel from iterable source:
@@ -18,7 +17,7 @@ Create a flip panel from iterable source:
 ````dart
 final digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-FlipPanel.builder(
+FlipPanelPlus.builder(
     itemBuilder: (context, index) => Container(
        color: Colors.black,
        padding: const EdgeInsets.symmetric(horizontal: 6.0),
@@ -39,7 +38,7 @@ FlipPanel.builder(
 Create a flip panel from stream source:
 
 ````dart
-FlipPanel<int>.stream(
+FlipPanelPlus<int>.stream(
       itemStream: Stream.periodic(Duration(milliseconds: 1000), (count) => count % 10),
       itemBuilder: (context, value) => Container(
         color: Colors.black,
@@ -58,4 +57,17 @@ FlipPanel<int>.stream(
 
 ````
 
+Create a flip panel countdown:
 
+````dart
+FlipClock.countdown(
+  duration: const Duration(hours:1),
+  digitColor: Colors.white,
+  backgroundColor: Colors.black,
+  digitSize: 48.0,
+  borderRadius: const BorderRadius.all(Radius.circular(3.0)),
+  onDone: () {
+    print('OnDone');
+   },
+)
+````
