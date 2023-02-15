@@ -25,6 +25,10 @@ class FlipClockPlus extends StatelessWidget {
   final bool _showHours;
   final bool _showDays;
 
+  /// custom str label that you can change them when we use [FlipClockPlus.reverseCountdown]
+  late String? _daysLabelStr, _hoursLabelStr, _minutesLabelStr,
+      _secondsLabelStr;
+
   Duration? timeLeft;
 
   /// Called when the countdown clock hits zero.
@@ -48,6 +52,10 @@ class FlipClockPlus extends StatelessWidget {
     this.width = 60.0,
     this.centerGapSpace = 0.0,
     this.timeLeft,
+    String? daysLabelStr,
+    String? hoursLabelStr,
+    String? minutesLabelStr,
+    String? secondsLabelStr,
   })
       : _showHours = true,
         _showDays = false,
@@ -183,12 +191,20 @@ class FlipClockPlus extends StatelessWidget {
     this.height = 40.0,
     this.width = 24.0,
     this.centerGapSpace = 0.0,
+    String? daysLabelStr,
+    String? hoursLabelStr,
+    String? minutesLabelStr,
+    String? secondsLabelStr,
   })
       : countdownMode = true,
         startTime = DateTime(2018, 0, 0, 0, 0, duration.inSeconds),
         _showHours = true,
         _showDays = true,
         timeLeft = duration,
+        _daysLabelStr = daysLabelStr,
+        _hoursLabelStr=hoursLabelStr,
+        _minutesLabelStr=minutesLabelStr,
+        _secondsLabelStr=secondsLabelStr,
         super(key: key) {
     _digitBuilder = (context, digit) =>
         Container(
@@ -236,8 +252,8 @@ class FlipClockPlus extends StatelessWidget {
           ? timeLeft = timeLeft! - const Duration(seconds: 1)
           : time = time.add(const Duration(seconds: 1));
 
-      if(countdownMode){
-        if(timeLeft == Duration.zero){
+      if (countdownMode) {
+        if (timeLeft == Duration.zero) {
           if (onDone != null) onDone!();
         }
       }
@@ -260,7 +276,7 @@ class FlipClockPlus extends StatelessWidget {
                 (DateTime time) =>
             (timeLeft!.inDays > 99) ? 9 : (timeLeft!.inDays % 10),
             startTime,
-            "days"),
+            _daysLabelStr ?? "days"),
         Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
@@ -291,7 +307,7 @@ class FlipClockPlus extends StatelessWidget {
                 ? (timeLeft!.inHours % 24) % 10
                 : (time.hour) % 10,
             startTime,
-            "Hours"),
+            _hoursLabelStr ?? "Hours"),
         Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
@@ -310,7 +326,9 @@ class FlipClockPlus extends StatelessWidget {
     }
     return Row(
       mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: _showDays ? CrossAxisAlignment.start : CrossAxisAlignment.center,
+      crossAxisAlignment: _showDays
+          ? CrossAxisAlignment.start
+          : CrossAxisAlignment.center,
       children: digitList
         ..addAll([
           // Minutes
@@ -325,7 +343,7 @@ class FlipClockPlus extends StatelessWidget {
                   ? (timeLeft!.inMinutes % 60) % 10
                   : (time.minute) % 10,
               startTime,
-              "minutes"),
+              _minutesLabelStr ?? "minutes"),
 
           Column(
             mainAxisSize: MainAxisSize.min,
@@ -354,7 +372,7 @@ class FlipClockPlus extends StatelessWidget {
                   ? (timeLeft!.inSeconds % 60) % 10
                   : (time.second) % 10,
               startTime,
-              "seconds")
+              _secondsLabelStr ?? "seconds")
         ]),
     );
   }
@@ -391,7 +409,7 @@ class FlipClockPlus extends StatelessWidget {
           ),
         ]),
         (_showDays)
-            ? Row(
+            ? id.isNotEmpty ? Row(
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.all(1.0),
@@ -416,8 +434,8 @@ class FlipClockPlus extends StatelessWidget {
               ),
             )
           ],
-        )
-            : Row()
+        ) : Container()
+            : Container()
       ],
     );
   }
