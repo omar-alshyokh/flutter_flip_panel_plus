@@ -1,6 +1,6 @@
 # Flip Panel Plus
 
-A package for flip panel with built-in animation. Since the developer of 'https://pub.dev/packages/flip_panel' didn't respond. So we updated the package and added some improvements.
+A package for flip panel with built-in animation. Since the developer of 'https://pub.dev/packages/flip_panel' didn't respond. So we updated the package, added some improvements and fixed some issues.
 
 <p>
    <img src="https://raw.githubusercontent.com/omar-alshyokh/flutter_flip_panel_plus/master/screenshots/flip_clock.gif" width="200" 
