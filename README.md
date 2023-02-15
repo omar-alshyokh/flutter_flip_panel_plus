@@ -56,7 +56,7 @@ FlipPanelPlus<int>.stream(
 
 Create a flip panel countdown:
 <p>
-<img src="https://github.com/omar-alshyokh/flutter_flip_panel_plus/master/screenshots/flip_countdown?raw=true" width="250" height="443" />
+<img src="https://raw.githubusercontent.com/omar-alshyokh/flutter_flip_panel_plus/master/screenshots/flip_countdown.gif" width="250" height="443" />
 </p>
 ````dart
 FlipClock.countdown(
