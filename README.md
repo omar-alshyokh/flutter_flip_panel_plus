@@ -59,7 +59,7 @@ Create a flip panel countdown:
 <img src="https://github.com/omar-alshyokh/flutter_flip_panel_plus/master/screenshots/flip_countdown?raw=true" width="250" height="443" />
 </p>
 ````dart
-FlipClock.countdown(
+FlipClockPlus.countdown(
   duration: const Duration(hours:1),
   digitColor: Colors.white,
   backgroundColor: Colors.black,

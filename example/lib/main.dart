@@ -180,7 +180,7 @@ class FlipClockPage extends StatelessWidget {
         title: const Text('Flip Clock'),
       ),
       body: Center(
-        child: FlipClock.simple(
+        child: FlipClockPlus.simple(
           startTime: DateTime.now(),
           digitColor: Colors.white,
           backgroundColor: Colors.black,
@@ -205,7 +205,7 @@ class CountdownClockPage extends StatelessWidget {
         title: const Text('Flip Countdown'),
       ),
       body: Center(
-        child: FlipClock.countdown(
+        child: FlipClockPlus.countdown(
           duration: const Duration(hours:1),
           digitColor: Colors.white,
           backgroundColor: Colors.black,
@@ -234,7 +234,7 @@ class ReverseCountdown extends StatelessWidget {
         title: const Text('Reverse Countdown'),
       ),
       body: Center(
-        child: FlipClock.reverseCountdown(
+        child: FlipClockPlus.reverseCountdown(
           duration:const Duration(days: 10),
           digitColor: Colors.white,
           backgroundColor: Colors.black,

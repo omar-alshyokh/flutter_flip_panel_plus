@@ -9,10 +9,10 @@ import 'dart:math' as math;
 typedef Widget DigitBuilder(BuildContext, int);
 
 ///
-/// A [Widget] provides a simple implementation of a flipclock using [FlipPanelPlus]
+/// A [Widget] provides a simple implementation of a flipclockPlus using [FlipPanelPlus]
 ///
 // ignore: must_be_immutable
-class FlipClock extends StatelessWidget {
+class FlipClockPlus extends StatelessWidget {
   late DigitBuilder _digitBuilder;
   late Widget _separator;
   late DateTime startTime;
@@ -36,7 +36,7 @@ class FlipClock extends StatelessWidget {
   /// this control the center gap space
   final double centerGapSpace;
 
-  FlipClock({
+  FlipClockPlus({
     Key? key,
     required DigitBuilder digitBuilder,
     required Widget separator,
@@ -56,7 +56,7 @@ class FlipClock extends StatelessWidget {
         onDone = null,
         super(key: key);
 
-  FlipClock.simple({
+  FlipClockPlus.simple({
     Key? key,
     required this.startTime,
     required Color digitColor,
@@ -112,7 +112,7 @@ class FlipClock extends StatelessWidget {
     );
   }
 
-  FlipClock.countdown({
+  FlipClockPlus.countdown({
     Key? key,
     required Duration duration,
     required Color digitColor,
@@ -169,7 +169,7 @@ class FlipClock extends StatelessWidget {
     );
   }
 
-  FlipClock.reverseCountdown({
+  FlipClockPlus.reverseCountdown({
     Key? key,
     // required DateTime now,
     // required DateTime dDay,
