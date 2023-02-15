@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.light().copyWith(
         scaffoldBackgroundColor: Colors.white,
       ),
-      title: 'FlipPanel',
+      title: 'FlipPanelPlus',
       routes: {
         'flip_image': (_) => const AnimatedImagePage(),
         'flip_clock': (_) => const FlipClockPage(),
