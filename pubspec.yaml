@@ -1,6 +1,6 @@
 name: flip_panel_plus
-description: A package for flip panel items like image, countdown or clock with built-in animation. Since the developer of flip_panel didn't respond. So we updated the package, added some improvements and fixed some issues.
-version: 1.0.0+2
+description: A package for flip panel items like image, countdown or clock with built-in animation.
+version: 1.0.0+3
 homepage: https://github.com/omar-alshyokh/flutter_flip_panel_plus
 
 environment:
