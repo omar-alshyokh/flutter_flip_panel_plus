@@ -83,7 +83,7 @@ class FlipDigit extends StatefulWidget {
   /// Whether the panel folds up or down.
   final FlipDirection direction;
 
-  /// Vertical gap between the two halves — the split-flap seam.
+  /// Vertical gap between the two halves, giving the split-flap seam.
   /// Set to `0` for a seamless digit with no line through the middle.
   final double spacing;
 

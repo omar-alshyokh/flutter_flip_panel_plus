@@ -5,10 +5,10 @@ engine. The existing widgets keep their constructors, so most code upgrades by
 bumping the version.
 
 ### Added
-* `FlipDigitStyle` — the look of a digit in one reusable object, with gradient,
+* `FlipDigitStyle`, the look of a digit in one reusable object, with gradient,
   border, shadow and text-style support, a `copyWith`, and four presets:
   `dark`, `light`, `card` and `minimal`.
-* `FlipCountdownBuilder` — the timing engine with no opinion about appearance,
+* `FlipCountdownBuilder`, the timing engine with no opinion about appearance,
   so any UI can be driven by it.
 * `completedBuilder` on `FlipCountdown`, to replace the digits once it finishes.
 * `labelPosition` (above or below), `labelSpacing`, and
@@ -18,12 +18,12 @@ bumping the version.
   `FlipDigitStyle.easternArabicNumerals`, for other numeral systems.
 * `textDirection` on `FlipCountdown`, for mirroring the segments on request.
 * Segment visibility on `FlipClockPlus`: `showHours`, `showMinutes` and
-  `showSeconds` can now be set directly — this was asked for in issue #1.
-* `FlipCountdown` — a countdown widget that can target a `DateTime` or a
+  `showSeconds` can now be set directly. This was asked for in issue #1.
+* `FlipCountdown`, a countdown widget that can target a `DateTime` or a
   `Duration`, choose its segments automatically, and report `onTick`/`onDone`.
-* `FlipCountdownController` — start, pause, resume, reset and `addTime`, plus
+* `FlipCountdownController`, with start, pause, resume, reset and `addTime`, plus
   `remaining`, `progress` and `status`.
-* `FlipDigit` and `FlipNumber` — value-driven flipping digits that can be used
+* `FlipDigit` and `FlipNumber`, value-driven flipping digits that can be used
   on their own, with no stream to wire up.
 * `referenceTime`, so a countdown can be measured against a server clock instead
   of the device clock.

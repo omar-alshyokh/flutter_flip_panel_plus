@@ -21,7 +21,7 @@ every tick, which quietly drifts when a frame is slow, and jumps to the wrong
 value after the app has been in the background.
 
 `FlipCountdown` derives the time left from how much time has actually passed,
-and reads two clocks to do it — a monotonic one and the wall clock — taking
+and reads two clocks to do it (a monotonic one and the wall clock), taking
 whichever has advanced further:
 
 * **Late or dropped ticks** cannot cause drift; the value is recomputed, not
@@ -65,7 +65,7 @@ FlipCountdown(
 )
 ```
 
-Segments are chosen automatically — days only appear when the countdown is a day
+Segments are chosen automatically. Days only appear when the countdown is a day
 or more, hours only when it is an hour or more. Override with `showDays`,
 `showHours`, `showMinutes` and `showSeconds`.
 
@@ -158,7 +158,7 @@ from wrapping it. Two common ones:
 
 <img src="https://raw.githubusercontent.com/omar-alshyokh/flutter_flip_panel_plus/master/screenshots/flip_recipes.gif" width="420" alt="Ruled and compact strip" />
 
-**Ruled** — rules above and below, no boxes:
+**Ruled**, with rules above and below and no boxes:
 
 ```dart
 Column(
@@ -179,7 +179,7 @@ Column(
 )
 ```
 
-**Compact strip** — an icon, a caption and the time on one line:
+**Compact strip**, with an icon, a caption and the time on one line:
 
 ```dart
 Container(
@@ -205,15 +205,15 @@ Container(
 )
 ```
 
-> **Tip — flip speed.** `flipDuration` defaults to 450ms. Against a one-second
+> **Tip on flip speed.** `flipDuration` defaults to 450ms. Against a one-second
 > tick that means the digit is mid-fold for nearly half of every second, which
 > is fine behind a solid panel but reads as a broken glyph on the box-less
-> styles above. Shorten it (240–300ms) whenever the digits have no panel to
+> styles above. Shorten it (240 to 300ms) whenever the digits have no panel to
 > fold against.
 
 ### Languages and RTL
 
-Labels are ordinary strings — pass whatever language you need:
+Labels are ordinary strings, so pass whatever language you need:
 
 ```dart
 FlipCountdown(
@@ -266,7 +266,7 @@ FlipCountdown(
 ```
 
 And [`FlipCountdownBuilder`] gives you the timing engine with no UI at all, so
-the countdown can drive anything — a progress ring, a sentence, a chart:
+the countdown can drive anything: a progress ring, a sentence, a chart.
 
 ```dart
 FlipCountdownBuilder(
@@ -379,4 +379,4 @@ maintained.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).

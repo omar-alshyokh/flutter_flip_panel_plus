@@ -12,8 +12,8 @@ import 'package:flutter/material.dart';
 /// FlipNumber(value: n, style: style);
 /// ```
 ///
-/// Start from one of the presets — [FlipDigitStyle.dark],
-/// [FlipDigitStyle.light], [FlipDigitStyle.minimal], [FlipDigitStyle.card] —
+/// Start from one of the presets ([FlipDigitStyle.dark],
+/// [FlipDigitStyle.light], [FlipDigitStyle.minimal], [FlipDigitStyle.card])
 /// and adjust with [copyWith].
 @immutable
 class FlipDigitStyle {
@@ -108,7 +108,7 @@ class FlipDigitStyle {
           ),
         );
 
-  /// No box at all — just the digits, for overlaying on artwork or a photo.
+  /// No box at all, just the digits, for overlaying on artwork or a photo.
   const FlipDigitStyle.minimal({
     Color color = Colors.white,
     double fontSize = 34.0,

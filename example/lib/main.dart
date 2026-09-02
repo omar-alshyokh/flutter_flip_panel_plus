@@ -358,21 +358,21 @@ class FlipStylesPage extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(16, 20, 16, 40),
         children: [
           _row(
-            'dark — the classic board',
+            'dark: the classic board',
             const FlipCountdown(
               duration: _d,
               style: FlipDigitStyle.dark(fontSize: 26, width: 36, height: 50),
             ),
           ),
           _row(
-            'light — inverted with a hairline border',
+            'light: inverted with a hairline border',
             const FlipCountdown(
               duration: _d,
               style: FlipDigitStyle.light(fontSize: 26, width: 36, height: 50),
             ),
           ),
           _row(
-            'card — tinted and raised',
+            'card: tinted and raised',
             FlipCountdown(
               duration: _d,
               style: FlipDigitStyle.card(
@@ -409,7 +409,7 @@ class FlipStylesPage extends StatelessWidget {
             ),
           ),
           _row(
-            'seamless — panelSpacing: 0',
+            'seamless (panelSpacing: 0)',
             const FlipCountdown(
               duration: _d,
               panelSpacing: 0,
@@ -463,7 +463,7 @@ class FlipStylesPage extends StatelessWidget {
             ),
           ),
           _row(
-            'minimal — no boxes, no separator',
+            'minimal: no boxes, no separator',
             Container(
               padding: const EdgeInsets.symmetric(vertical: 10),
               color: const Color(0xFF14141A),
@@ -478,7 +478,7 @@ class FlipStylesPage extends StatelessWidget {
             ),
           ),
           _row(
-            'ruled — rules above and below, no boxes',
+            'ruled: rules above and below, no boxes',
             Container(
               padding: const EdgeInsets.symmetric(vertical: 14),
               color: const Color(0xFF14141A),
@@ -504,7 +504,7 @@ class FlipStylesPage extends StatelessWidget {
             ),
           ),
           _row(
-            'compact strip — icon, label and time inline',
+            'compact strip: icon, label and time inline',
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
               decoration: BoxDecoration(
@@ -553,7 +553,7 @@ class FlipStylesPage extends StatelessWidget {
             ),
           ),
           _row(
-            'custom digitBuilder — full control',
+            'custom digitBuilder: full control',
             FlipCountdown(
               duration: _d,
               showSeconds: false,
@@ -582,7 +582,7 @@ class FlipStylesPage extends StatelessWidget {
             ),
           ),
           _row(
-            'completedBuilder — 3s, then a message',
+            'completedBuilder: 3s, then a message',
             FlipCountdown(
               duration: const Duration(seconds: 3),
               style: const FlipDigitStyle.dark(
@@ -606,7 +606,7 @@ class FlipStylesPage extends StatelessWidget {
             ),
           ),
           _row(
-            'headless builder — any UI you like',
+            'headless builder: any UI you like',
             FlipCountdownBuilder(
               duration: _d,
               builder: (context, remaining, status) => Text(

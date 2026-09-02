@@ -116,8 +116,8 @@ class FlipCountdown extends StatelessWidget {
   /// Called on every tick with the time remaining.
   final ValueChanged<Duration>? onTick;
 
-  /// Replaces the digits once the countdown finishes — an "EXPIRED" message,
-  /// a sold-out badge, anything. When null the digits stay at zero.
+  /// Replaces the digits once the countdown finishes, with an "EXPIRED"
+  /// message, a sold-out badge, anything. When null the digits stay at zero.
   final WidgetBuilder? completedBuilder;
 
   /// Force the days segment on or off. Null picks automatically.
@@ -165,7 +165,7 @@ class FlipCountdown extends StatelessWidget {
 
   final FlipDirection direction;
 
-  /// Vertical gap between the two halves of a digit — the split-flap seam.
+  /// Vertical gap between the two halves of a digit, giving the split-flap seam.
   /// Set to `0` for a seamless digit with no line through the middle.
   final double panelSpacing;
 
@@ -176,8 +176,8 @@ class FlipCountdown extends StatelessWidget {
   ///
   /// Defaults to [TextDirection.ltr]. A clock reads left to right in every
   /// locale, so this deliberately does **not** follow an ambient RTL
-  /// [Directionality] — otherwise the seconds would appear where the hours
-  /// belong. Labels themselves are ordinary strings and render in whatever
+  /// [Directionality], because otherwise the seconds would appear where the
+  /// hours belong. Labels themselves are ordinary strings and render in whatever
   /// language you pass. Set this explicitly if you really want the segments
   /// mirrored.
   final TextDirection textDirection;

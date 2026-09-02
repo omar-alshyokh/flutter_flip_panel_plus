@@ -11,9 +11,9 @@ typedef FlipCountdownWidgetBuilder = Widget Function(
 
 /// A countdown with no opinion about how it looks.
 ///
-/// This is the whole timing engine — the protection against drift, device
-/// sleep and clock changes — exposed as a builder, so any UI can be driven by
-/// it, not just flipping digits.
+/// This is the whole timing engine, with its protection against drift, device
+/// sleep and clock changes, exposed as a builder so any UI can be driven by it,
+/// not just flipping digits.
 ///
 /// ```dart
 /// FlipCountdownBuilder(
